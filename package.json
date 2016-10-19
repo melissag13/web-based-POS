@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/melissag13/web-based-POS/issues"
   },
-  "homepage": "https://github.com/melissag13/web-based-POS#readme"
+  "homepage": "https://github.com/melissag13/web-based-POS#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.6",
+    "moment": "^2.15.1",
+    "mysql": "^2.11.1",
+    "sequelize": "^3.24.4"
+  }
 }
