@@ -5,7 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "createperson": "sequelize model:create --name Person --attributes first_name:string,last_name:string,street:string,city:string,state:string,zip:string,phone:string,email:string",
+    "createvendor": "sequelize model:create --name Vendor --attributes company_name:string",
+    "createcustomer": "sequelize model:create --name Customer --attributes preferred_contact_method:string",
+    "createemp": "sequelize model:create --name Employee --attributes start_date:dateonly,end_date:dateonly,salary:float,role:string",
+    "createproduct": "sequelize model:create --name Product --attributes product_name:string,description:text,price:float,cost:float,sku:string,upc:integer,quantity:integer",
+    "createprodtransaction": "sequelize model:create --name ProductTransaction --attributes quantity:integer,transaction_price:float",
+    "createreceipt": "sequelize model:create --name Receipt --attributes receipt_timestamp:date",
+    "createdb": "npm run createperson && npm run createvendor && npm run createcustomer && npm run createemp && npm run createproduct && npm run createtransaction && npm run createreceipt"
   },
   "repository": {
     "type": "git",
