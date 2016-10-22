@@ -1,11 +1,16 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Receipt = sequelize.define('Receipt', {
-    receipt_timestamp: DataTypes.DATE
+    receiptTimestamp: DataTypes.DATE
   }, {
     classMethods: {
       associate: function(models) {
         // associations can be defined here
+        // Receipt is associated to customer and employee tables
+        // Adds customer_id to receipt table
+        Receipt.belongsTo(models.Customer); 
+        // Adds employee_id to receipt table
+        Receipt.belongsTo(models.Employee);
       }
     }
   });

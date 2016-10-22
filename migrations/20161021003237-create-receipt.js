@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      receipt_timestamp: {
+      receiptTimestamp: {
         type: Sequelize.DATE
       },
       createdAt: {

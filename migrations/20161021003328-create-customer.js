@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      preferred_contact_method: {
+      preferredContactMethod: {
         type: Sequelize.STRING
       },
       createdAt: {
