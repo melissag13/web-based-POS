@@ -7,12 +7,12 @@ describe("Vendor tests", function() {
 	});
   
 
-	it("A Vendor can have one product", function() {
-		vendor.create()
-	});
+	// it("A Vendor can have one product", function() {
+	// 	vendor.create()
+	// });
 
-	it("A vendor can have many products", function () {
+	// it("A vendor can have many products", function () {
 
-	});
+	// });
 
 })

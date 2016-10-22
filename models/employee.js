@@ -1,11 +1,11 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Employee = sequelize.define('Employee', {
-    start_date: DataTypes.DATEONLY,
-    end_date: DataTypes.DATEONLY,
+    startDate: DataTypes.DATEONLY,
+    endDate: DataTypes.DATEONLY,
     salary: DataTypes.FLOAT,
     role: DataTypes.STRING,
-    is_hourly: DataTypes.BOOLEAN
+    isHourly: DataTypes.BOOLEAN
   }, {
     classMethods: {
       associate: function(models) {

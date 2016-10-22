@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Vendor = sequelize.define('Vendor', {
-    company_name: DataTypes.STRING
+    companyName: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {
@@ -11,6 +11,7 @@ module.exports = function(sequelize, DataTypes) {
         // This adds customer_id to vendor
         Vendor.belongsTo(models.Person);
         // Adds VendorID to Product
+        // This adds vendor_id to product talbe
         Vendor.hasMany(models.Product);
       }
     }
