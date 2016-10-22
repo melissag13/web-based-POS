@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
     freezeTableName: true,
 
     // define the table's name
-    tableName: 'users',
+    tableName: 'person',
 
     classMethods: {
       associate: function(models) {
