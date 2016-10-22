@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes) {
     start_date: DataTypes.DATEONLY,
     end_date: DataTypes.DATEONLY,
     salary: DataTypes.FLOAT,
-    role: DataTypes.STRING
+    role: DataTypes.STRING,
+    is_hourly: DataTypes.BOOLEAN
   }, {
     classMethods: {
       associate: function(models) {

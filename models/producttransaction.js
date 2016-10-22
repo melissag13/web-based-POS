@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
         // Define many to many relationship between productiontransaction and receipt
         ProductTransaction.hasOne(models.Receipt, {through: 'ProductTransaction_Receipt'});
         // Define one to one relationship between productiontransaction and product
-        ProductTransaction.hasOne(models.Product);
+        ProductTransaction.belongsTo(models.Product);
       }
     }
   });
