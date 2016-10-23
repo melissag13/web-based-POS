@@ -1,7 +1,9 @@
 #searchTextbox {
-    width: 90%;
+    width: 45%;
     padding: 10px;
     border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
 #searchButton {
@@ -22,15 +24,18 @@
 }
 #text{
   color: white;
-  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-style: italic;
   font-size: 20px;
+}
+#scanText {
+  margin: 30px;
 }
 
 #scanButton {
     padding: 7px 12px 7px 12px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-left: 5px;
+    margin-bottom: 20px;
     border-radius: 25px;
     background-color: gray;
     color: white;
@@ -42,4 +47,5 @@
 }
 #searchButton:hover{
   color: rgb(52, 54, 66);
+}
 }
