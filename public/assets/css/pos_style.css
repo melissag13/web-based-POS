@@ -22,7 +22,7 @@
 }
 
 body {
-	background-image: url("/assests/images/abstract-blue-background.jpg");
+	background-image: url("../images/abstract-blue-background.jpg");
 }
 /*.buttons{
 	padding: 20px;

@@ -46,6 +46,17 @@
             </div>
     	</div>
     
+    <div class="scanForm">
+      <form method="get" action="/searchResults" novalidate>
+        <div id="text"><span id="scanText">Enter a UPC code or scan one below. </span></div>
+        <input type="text" id="searchTextbox" name="upccode" placeholder=" Search..." required><br>
+        <input type="submit" name="name" value="Search" id="searchButton">
+        <button type="button" id="scanButton">Scan UPC</button>
+    <!-- Display UPC scanning box here -->
+    <div id="interactive" class="viewport"></div>
+      </form>
+    </div>
+
 		<div class="col-md-6">
 			<div class="panel panel-primary" style="background-color: rgba(0,0,0,.7); color: black; border-color: #0000cc;">
 				<div class="panel-heading" style="background-color: #3333ff; border-color: #0000cc;">
