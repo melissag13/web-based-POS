@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
         // Defines one to one relationship between employee and person
         // Source.belongsTo(Target) will add TargetID to Source model
         // This adds customer_id to vendor
-        Vendor.belongsTo(models.Person);
+        Vendor.belongsTo(models.Person, {as: 'Contact'});
         // Adds VendorID to Product
         // This adds vendor_id to product talbe
         Vendor.hasMany(models.Product);

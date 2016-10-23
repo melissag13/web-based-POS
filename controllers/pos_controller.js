@@ -13,18 +13,15 @@ var Receipt =  require('../models/')["Receipt"];
 
 var moment = require('moment');
 
-// Redirect the root route '/' to /burgers
-// router.get('/', function(req, res) {
-// 	res.redirect('/burgers');
-// });
-
-// At the default /burgers route, use the burger model to retrieve all records
+// Default route, won't really display people, just wanted to have it do /something/
 router.get('/', function(req, res) {
 	Person.findAll()
 	.then(function(person_data) {
-		console.log(person_data);
+		//console.log(person_data);
 		return res.render('index', {person_data})
 	});
 });
 
+
 module.exports = router;
+
