@@ -8,7 +8,7 @@
 	margin-top: 5px;
 }
 
-/*.panel-heading{
+.panel-heading{
 	border-left-style: solid; 
 	border-left-width: 5px; 
 	border-left-color: orange; 
@@ -22,11 +22,11 @@
 }
 
 body {
-	background-image: url(abstract-blue-background.jpg);
+	background-image: url("/assests/images/abstract-blue-background.jpg");
 }
 /*.buttons{
 	padding: 20px;
-}*/
+}
 
 /*body {
   width: 500px;
