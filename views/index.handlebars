@@ -17,31 +17,31 @@
             		<h3 class="panel-title">Order Summary</h3>
             	</div>
             	<div class="panel-body">
-              		<div class="text-warning" ng-hide="order.length">
+              		<div class="text-warning" hide="order.length">
                 		Nothing added
               		</div>
               			<ul class="list-group">
-                			<li class="list-group-item" ng-repeat = "item in order">
-                  	<div class="label label-success">${{item.item.price}}</div>
-                   					{{item.item.detail}}
+                			<li class="list-group-item" repeat = "item in order">
+                  	<div class="label label-success">Product Price</div>
+                   					Product Description
                   
-                 	<button class="btn btn-danger btn-xs pull-right" ng-click="deleteItem($index)">
+                 	<button class="btn btn-danger btn-xs pull-right" click="deleteItem($index)">
                    		<span class="glyphicon glyphicon-trash"></span>
                   	</button>
                 			</li>
               	 		</ul>
             	</div>
-            	<div class="panel-footer" ng-show="order.length">
-              		<div class="label label-danger">Total: ${{getSum()}}</div>
+            	<div class="panel-footer" show="order.length">
+              		<div class="label label-danger">Total: Sum </div>
             	</div>
-            	<div class="panel-footer" ng-show="order.length">
+            	<div class="panel-footer" show="order.length">
               		<div class="text-muted">
                 		What form of payment will you be using?
               		</div>
             	</div>
             	<div class="pull-right">
-              		<span class="btn btn-default" ng-click="clearOrder()" ng-disabled="!order.length">Clear</span>
-              		<span class="btn btn-danger" ng-click="checkout()" ng-disabled="!order.length">Checkout</span>
+              		<span class="btn btn-default" click="clearOrder()" disabled="!order.length">Clear</span>
+              		<span class="btn btn-danger" click="checkout()" disabled="!order.length">Checkout</span>
             	</div>
             </div>
     	</div>

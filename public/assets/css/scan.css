@@ -1,0 +1,45 @@
+#searchTextbox {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#searchButton {
+    padding: 7px 12px 7px 12px;
+    margin-top: 5px;
+    margin-left: 29%;
+    border-radius: 25px;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+#newSearchButton{
+  padding: 7px 12px 7px 12px;
+  border-radius: 25px;
+  background-color: gray;
+  color: white;
+  border: none;
+}
+#text{
+  color: white;
+  font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+#scanButton {
+    padding: 7px 12px 7px 12px;
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 25px;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+
+#scanButton:hover {
+    color: rgb(52, 54, 66);
+}
+#searchButton:hover{
+  color: rgb(52, 54, 66);
+}
