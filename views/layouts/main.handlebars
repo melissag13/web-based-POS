@@ -15,12 +15,29 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="/assets/css/pos_style.css"/>
 	<link rel="stylesheet" type="text/css" href="/assets/css/scan.css">
+=======
+	<link rel="stylesheet" href="/assets/css/pos_style.css" type="text/css" />
+	<title> Welcome To Fork-This POS! </title>
+>>>>>>> d624e6bbd0a8708071a3d876eaa92dc03fc66b0d
 </head>
 <body>
-	
+	<p>
+		{{#unless logged_in}}
+			<a href="/users/sign-in">Sign In</a>
+			<a href="/users/new">Register</a>
+		{{/unless}}
+
+		{{#if logged_in}}
+			Welcome {{email}}! <br>
+			You are user {{employee_id}}.<br>
+			<a href="/users/sign-out">Sign Out</a>
+		{{/if}}
+	</p>
 	{{{ body }}}
+<<<<<<< HEAD
 
 
 
@@ -37,5 +54,10 @@
 	<script src="javascript/script.js"></script>
 
 	<script   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+=======
+	
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous">
+	</script>
+>>>>>>> d624e6bbd0a8708071a3d876eaa92dc03fc66b0d
 </body>
 </html>
