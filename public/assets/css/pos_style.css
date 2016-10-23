@@ -127,7 +127,7 @@ div.equal {
   display: inline-block;
   border: 1px solid #3079ED;
   border-radius: 1px;
-  width: 10%;
+  /*width: 10%;*/
   text-align: center;
   padding: 100px 30px;
   margin: 10px 6px 10px 0;
@@ -159,17 +159,17 @@ div.equal:active {
  /* CSS for UPC scan input */
 
  #searchTextbox {
-    width: 45%;
+    width: 95%;
     padding: 10px;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 10px;
 }
 
 #searchButton {
     padding: 7px 12px 7px 12px;
     margin-top: 5px;
-    margin-left: 29%;
+    margin-left: 65%;
     border-radius: 25px;
     background-color: gray;
     color: white;
@@ -194,7 +194,7 @@ div.equal:active {
 #scanButton {
     padding: 7px 12px 7px 12px;
     margin-top: 10px;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-bottom: 20px;
     border-radius: 25px;
     background-color: gray;
