@@ -5,6 +5,8 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var session = require('express-session');
+var cookieParser = require('cookie-parser'); // for working with cookies
 
 var models = require('./models');
 
@@ -26,6 +28,9 @@ app.use(methodOverride('_method'));
 
 // view engine setup
 //app.set('views', path.join(__dirname, 'views'));
+
+// Borrowed from sequelize-cats class activity
+app.use(session({ secret: 'app', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true}));
 
 
 // Handlebars
