@@ -19,14 +19,14 @@
 .label {
 	font-size: 120%; 
 	padding-right: 10px;
-}
+}*/
 
 body {
-	background-image: url(abstract-blue-background.jpg);
+	background-image: url("../images/abstract-blue-background.jpg");
 }
 /*.buttons{
 	padding: 20px;
-}*/
+}
 
 /*body {
   width: 500px;
@@ -127,7 +127,7 @@ div.equal {
   display: inline-block;
   border: 1px solid #3079ED;
   border-radius: 1px;
-  width: 10%;
+  /*width: 10%;*/
   text-align: center;
   padding: 100px 30px;
   margin: 10px 6px 10px 0;
@@ -155,3 +155,58 @@ div.equal:active {
     border: 1px solid black;
     display: inline-block;
 }
+ 
+ /* CSS for UPC scan input */
+
+ #searchTextbox {
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#searchButton {
+    padding: 7px 12px 7px 12px;
+    margin-top: 5px;
+    margin-left: 65%;
+    border-radius: 25px;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+#newSearchButton{
+  padding: 7px 12px 7px 12px;
+  border-radius: 25px;
+  background-color: gray;
+  color: white;
+  border: none;
+}
+#text{
+  color: white;
+  font-style: italic;
+  font-size: 20px;
+}
+#scanText {
+  margin: 30px;
+}
+
+#scanButton {
+    padding: 7px 12px 7px 12px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+
+#scanButton:hover {
+    color: rgb(52, 54, 66);
+}
+#searchButton:hover{
+  color: rgb(52, 54, 66);
+}
+
+
