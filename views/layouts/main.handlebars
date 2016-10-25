@@ -23,20 +23,11 @@
 
 </head>
 <body>
-	<p>
-		{{#unless logged_in}}
-			<a href="/login/sign-in">Sign In</a>
-			<a href="/login/new">Register</a>
-		{{/unless}}
 
-		{{#if logged_in}}
-			Welcome {{email}}! <br>
-			You are user {{employee_id}}.<br>
-			<a href="/login/sign-out">Sign Out</a>
-		{{/if}}
-	</p>
 	{{{ body }}}
-
+	
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	
 	<!-- UPC scanner javascript -->
 	<script src="javascript/quagga.min.js" type="text/javascript"></script>
 
@@ -46,7 +37,7 @@
 	<!-- Main Landing Page javascript -->
 	<script src="javascript/script.js"></script>
 
-	<script   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	
 
 </body>
 </html>

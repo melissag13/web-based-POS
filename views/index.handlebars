@@ -1,6 +1,14 @@
-{{#each person_data}}
-	{{this.first_name}}
-{{/each}}
+{{#unless logged_in}}
+  <a href="/login/sign-in">Sign In</a>
+  <a href="/login/new">Register</a>
+{{/unless}}
+
+{{#if logged_in}}     
+  Welcome {{email}}! <br>
+  Test: {{username}}
+  Employee ID: {{employee_id}} <br>
+  <a href="/login/sign-out">Sign Out</a>
+
 
 <div class="container">
    <!-- Jumbotron -->
@@ -104,3 +112,4 @@
  
  	</div>
 </div>
+{{/if}}

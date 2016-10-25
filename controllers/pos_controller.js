@@ -18,9 +18,14 @@ router.get('/', function(req, res) {
 	Person.findAll()
 	.then(function(person_data) {
 		//console.log(person_data);
-		return res.render('index', {person_data})
+		return res.render('index', {person_data: person_data, logged_in: req.session.logged_in, email: req.session.username, employee_id: req.session.employee_id})
 	});
 });
+
+router.post('/add', function(req, res) {
+	console.log(req.body.productUPCsku);
+	Product.findOne({where: {}})
+})
 
 
 module.exports = router;
