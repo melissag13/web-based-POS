@@ -40,19 +40,31 @@
                         <h3 class="panel-title">Order Summary</h3>
                     </div>
                     <div class="panel-body">
-                        <div class="text-warning" hide="order.length">
-                            Nothing added
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item" repeat="item in order">
-                                <div class="label label-success">Product Price</div>
-                                <div class="label label-default">Product Description</div>
+                        <table class="table">
+                            <thead>
+                            <th>Sku</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            </thead>
+                            <tbody class="table-striped" id="orderSummaryBody">
+                            <!--Order line items are added here via pos.js -->
+                            </tbody>
+                        </table>
+                        <!--<div class="text-warning" hide="order.length">-->
+                            <!--Nothing added-->
+                        <!--</div>-->
+                        <!--<ul class="list-group" id="orderSummary">-->
+                            <!--<li class="list-group-item" repeat="item in order">-->
+                                <!--<div class="label label-success">Product Price</div>-->
+                                <!--<div class="label label-default">Product Description</div>-->
 
-                                <button class="btn btn-danger btn-xs pull-right" click="deleteItem(index)">
-                                    <span class="glyphicon glyphicon-trash"></span>
-                                </button>
-                            </li>
-                        </ul>
+                                <!--<button class="btn btn-danger btn-xs pull-right" click="deleteItem(index)">-->
+                                    <!--<span class="glyphicon glyphicon-trash"></span>-->
+                                <!--</button>-->
+                            <!--</li>-->
+
+                        <!--</ul>-->
+
                     </div>
                     <div class="panel-footer" show="order.length">
                         <div class="label label-danger">Total: Sum</div>
