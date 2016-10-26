@@ -26,6 +26,11 @@ body {
 }
 #text1 {
 	color: black;
+
+}
+
+.pad-top {
+    margin: 30px 0px 20px 0px;
 }
 
 #create-update-form {
@@ -47,7 +52,7 @@ body {
     padding: 8px 10px;
     width: 340px;
 }
-fieldset{ border:none; }
+
 
 #create-update-form .form-group input{
     margin: 10px 0;
@@ -68,10 +73,10 @@ fieldset{ border:none; }
  border-radius:3px;
 }
 
-#create-update-form .form-group label.error {
+/*#create-update-form .form-group label.error {
     color: #FB3A3A;
     display: inline-block;
     font-weight:500;
     padding: 0;
     text-align: left;
-}
+}*/
