@@ -1,114 +1,116 @@
-<div >
+<div>
 {{#unless logged_in}}
-  <a href="/login/sign-in">Sign In</a>
-  <a href="/login/new">Register</a>
+        <a href="/login/sign-in">Sign In</a>
+        <a href="/login/new">Register</a>
 {{/unless}}
 
-{{#if logged_in}}     
-  Welcome {{email}}! <br>
-  Test: {{username}}
-  Employee ID: {{employee_id}} <br>
-  <a href="/login/sign-out">Sign Out</a>
-</div>
-
-<div class="container">
-   <!-- Jumbotron -->
-    <div class="jumbotron" style="background-color: rgba(0,0,0,.7); color: white">
-        <h2><span>Fork This POS</span></h2>
-        <span class="pull-right text-muted">Today is October 18, 2016 (Thu)</span>
-        <div class="text-muted">Orlando, FL</div>
+{{#if logged_in}}
+        Welcome {{email}}! <br>
+        Test: {{username}}
+        Employee ID: {{employee_id}} <br>
+        <a href="/login/sign-out">Sign Out</a>
     </div>
-   
-    <div class="row">
-        <div class="col-md-6">
-            <div class="scanForm">
-                <form method="get" action="/searchResults" novalidate>
-                    <div id="text"><span id="scanText">Enter a UPC code or scan one below. </span></div>
-                    <input type="text" id="searchTextbox" name="upccode" placeholder=" Search..." required><br>
-                    <input type="submit" name="name" value="Search" id="searchButton">
-                    <button type="button" id="scanButton">Scan UPC</button>
-                </form>
-            </div>
+
+    <div class="container">
+        <!-- Jumbotron -->
+        <div class="jumbotron" style="background-color: rgba(0,0,0,.7); color: white">
+            <h2><span>Fork This POS</span></h2>
+            <span class="pull-right text-muted">Today is October 18, 2016 (Thu)</span>
+            <div class="text-muted">Orlando, FL</div>
         </div>
 
-    <div class="col-md-6">
-		<div class="panel panel-primary" style="background-color: rgba(0,0,0,.7); color: white; border-color: #0000cc;">
-            <div class="panel-heading" style="background-color: #3333ff; border-color: #0000cc;">
-            	<h3 class="panel-title">Order Summary</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="scanForm">
+                    <form class="create-update-form" action="/pos/add" method="POST">
+                        <div id="text"><span id="scanText">Enter a UPC code or scan one below. </span></div>
+                        <div class="form-group">
+                            <label for="addItem">Add item:</label>
+                            <input type="text" id="addItem" name="addItem">
+                        </div>
+                        <button type="submit">Add Item to Order</button>
+                    </form>
+                </div>
             </div>
-            	<div class="panel-body">
-              		<div class="text-warning" hide="order.length">
-                		Nothing added
-              		</div>
-              			<ul class="list-group">
-                			<li class="list-group-item" repeat = "item in order">
-                  	<div class="label label-success">Product Price</div>
-                   	<div class="label label-default">Product Description</div>
-                  
-                 	<button class="btn btn-danger btn-xs pull-right" click="deleteItem(index)">
-                   		<span class="glyphicon glyphicon-trash"></span>
-                  	</button>
-                			</li>
-              	 		</ul>
-            	</div>
-            	<div class="panel-footer" show="order.length">
-              		<div class="label label-danger">Total: Sum </div>
-            	</div>
-            	<div class="panel-footer" show="order.length">
-              		<div class="text-muted">
-                		What form of payment will you be using?
-              		</div>
-            	</div>
-            	<div class="pull-right">
-              		<span class="btn btn-default" click="clearOrder()" >Clear</span>
-              		<span class="btn btn-danger" click="checkout()" >Checkout</span>
-            	</div>
+
+            <div class="col-md-6">
+                <div class="panel panel-primary"
+                     style="background-color: rgba(0,0,0,.7); color: white; border-color: #0000cc;">
+                    <div class="panel-heading" style="background-color: #3333ff; border-color: #0000cc;">
+                        <h3 class="panel-title">Order Summary</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="text-warning" hide="order.length">
+                            Nothing added
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item" repeat="item in order">
+                                <div class="label label-success">Product Price</div>
+                                <div class="label label-default">Product Description</div>
+
+                                <button class="btn btn-danger btn-xs pull-right" click="deleteItem(index)">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer" show="order.length">
+                        <div class="label label-danger">Total: Sum</div>
+                    </div>
+                    <div class="panel-footer" show="order.length">
+                        <div class="text-muted">
+                            What form of payment will you be using?
+                        </div>
+                    </div>
+                    <div class="pull-right">
+                        <span class="btn btn-default" click="clearOrder()">Clear</span>
+                        <span class="btn btn-danger" click="checkout()">Checkout</span>
+                    </div>
+                </div>
             </div>
-    	</div>
-    
-        
 
-		<!-- <div class="col-md-6">
-			<div class="panel panel-primary" style="background-color: rgba(0,0,0,.7); color: black; border-color: #0000cc;">
-				<div class="panel-heading" style="background-color: #3333ff; border-color: #0000cc;">
-        		</div>
-					<div class="panel-body">
-						<div class="calculator">
-  					   		<div class="buttons">
-    							<div class="operators">
-      								<div id="clear">C</div>
-     								
-    							</div>
 
-    						<div class="leftPanel">
-      							<div class="numbers">
-        							<div>7</div>
-        							<div>8</div>
-        							<div>9</div>
-      							</div>
-      							<div class="numbers">
-        							<div>4</div>
-        							<div>5</div>
-        							<div>6</div>
-      							</div>
-      							<div class="numbers">
-        							<div>1</div>
-        							<div>2</div>
-        							<div>3</div>
-      							</div>
-      							<div class="numbers">
-        							<div>0</div>
-        							<div>.</div>
-        							<div>+</div>
-      							</div>
-    						</div>
-    							<div class="equal" id="result">=</div>
-  							</div>
-						</div>
-					</div>
-			</div>
-		</div> -->
- 
- 	</div>
-</div>
+            <!-- <div class="col-md-6">
+                <div class="panel panel-primary" style="background-color: rgba(0,0,0,.7); color: black; border-color: #0000cc;">
+                    <div class="panel-heading" style="background-color: #3333ff; border-color: #0000cc;">
+                    </div>
+                        <div class="panel-body">
+                            <div class="calculator">
+                                     <div class="buttons">
+                                    <div class="operators">
+                                          <div id="clear">C</div>
+
+                                    </div>
+
+                                <div class="leftPanel">
+                                      <div class="numbers">
+                                        <div>7</div>
+                                        <div>8</div>
+                                        <div>9</div>
+                                      </div>
+                                      <div class="numbers">
+                                        <div>4</div>
+                                        <div>5</div>
+                                        <div>6</div>
+                                      </div>
+                                      <div class="numbers">
+                                        <div>1</div>
+                                        <div>2</div>
+                                        <div>3</div>
+                                      </div>
+                                      <div class="numbers">
+                                        <div>0</div>
+                                        <div>.</div>
+                                        <div>+</div>
+                                      </div>
+                                </div>
+                                    <div class="equal" id="result">=</div>
+                                  </div>
+                            </div>
+                        </div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
 {{/if}}
