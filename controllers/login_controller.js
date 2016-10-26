@@ -110,7 +110,7 @@ router.post('/create', function(req,res) {
                                         startDate: req.body.startDate,
                                         salary: req.body.salary,
                                         role: req.body.role,
-                                        isHourly: req.body.isHourly,
+                                        isHourly: 0,
                                         PersonId: myUser.id
                                     })
                                     // Then we need to retrieve the newly created employee ID value

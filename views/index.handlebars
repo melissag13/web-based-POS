@@ -1,3 +1,4 @@
+<div >
 {{#unless logged_in}}
   <a href="/login/sign-in">Sign In</a>
   <a href="/login/new">Register</a>
@@ -8,7 +9,7 @@
   Test: {{username}}
   Employee ID: {{employee_id}} <br>
   <a href="/login/sign-out">Sign Out</a>
-
+</div>
 
 <div class="container">
    <!-- Jumbotron -->
@@ -19,11 +20,22 @@
     </div>
    
     <div class="row">
-      	<div class="col-md-6">
-			<div class="panel panel-primary" style="background-color: rgba(0,0,0,.7); color: white; border-color: #0000cc;">
-            	<div class="panel-heading" style="background-color: #3333ff; border-color: #0000cc;">
-            		<h3 class="panel-title">Order Summary</h3>
-            	</div>
+        <div class="col-md-6">
+            <div class="scanForm">
+                <form method="get" action="/searchResults" novalidate>
+                    <div id="text"><span id="scanText">Enter a UPC code or scan one below. </span></div>
+                    <input type="text" id="searchTextbox" name="upccode" placeholder=" Search..." required><br>
+                    <input type="submit" name="name" value="Search" id="searchButton">
+                    <button type="button" id="scanButton">Scan UPC</button>
+                </form>
+            </div>
+        </div>
+
+    <div class="col-md-6">
+		<div class="panel panel-primary" style="background-color: rgba(0,0,0,.7); color: white; border-color: #0000cc;">
+            <div class="panel-heading" style="background-color: #3333ff; border-color: #0000cc;">
+            	<h3 class="panel-title">Order Summary</h3>
+            </div>
             	<div class="panel-body">
               		<div class="text-warning" hide="order.length">
                 		Nothing added
@@ -54,20 +66,9 @@
             </div>
     	</div>
     
-        <div class="col-md-6">
-          <div class="scanForm">
-            <form method="get" action="/searchResults" novalidate>
-                <div id="text"><span id="scanText">Enter a UPC code or scan one below. </span></div>
-                <input type="text" id="searchTextbox" name="upccode" placeholder=" Search..." required><br>
-                <input type="submit" name="name" value="Search" id="searchButton">
-                <button type="button" id="scanButton">Scan UPC</button>
-            <!-- Display UPC scanning box here -->
-            <div id="interactive" class="viewport"></div>
-            </form>
-          </div>
-        </div>
+        
 
-		<div class="col-md-6">
+		<!-- <div class="col-md-6">
 			<div class="panel panel-primary" style="background-color: rgba(0,0,0,.7); color: black; border-color: #0000cc;">
 				<div class="panel-heading" style="background-color: #3333ff; border-color: #0000cc;">
         		</div>
@@ -76,9 +77,7 @@
   					   		<div class="buttons">
     							<div class="operators">
       								<div id="clear">C</div>
-     								<!--  <div>-</div>
-      								<div>&times;</div>
-      								<div>&divide;</div> -->
+     								
     							</div>
 
     						<div class="leftPanel">
@@ -108,7 +107,7 @@
 						</div>
 					</div>
 			</div>
-		</div>
+		</div> -->
  
  	</div>
 </div>
