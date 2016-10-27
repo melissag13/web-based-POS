@@ -1,16 +1,10 @@
-// $(document).ready(function() {
+$(document).ready(function() {
 
-// $(function(){
-//     $("#datepicker").datepicker();
+	$(function() {
+        $( "#datepicker-13" ).datepicker();
+        $( "#datepicker-13" ).datepicker("show");
 
-//     $("#format").change(function() {
-// 	$("#datepicker").datepicker("option", "dateFormat", $(this).val());
-// });
-// });
-//   });
+    });
 
-// $(document).ready(function() {
+});
 
-// 	$('.dropdown-toggle').dropdown()
-	
-// });
