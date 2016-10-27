@@ -102,6 +102,12 @@ function runningTotal(itemPrice, operator) {
 
 
 $(document).on('click', '#clearOrder', function clearOrder() {
+    // Empty the array
+    orderArray.length = 0;
+    // Empty the displayed rows
     $('#orderSummaryBody').empty();
+    // Reset running total
     $('#runningTotal').html('0.00');
+
 })
+
