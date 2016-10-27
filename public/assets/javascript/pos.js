@@ -36,8 +36,8 @@ function getIndex(itemIndex) {
 
     for (var i = 0; i < orderArray.length; i++) {
         console.log("i:", i);
-        console.log("orderArray[" + i + "].index: " +  orderArray[i].index);
-        if(orderArray[i].index == itemIndex) {
+        console.log("orderArray[" + i + "].index: " + orderArray[i].index);
+        if (orderArray[i].index == itemIndex) {
 
             return i;
         }
@@ -99,3 +99,9 @@ function runningTotal(itemPrice, operator) {
     }
     $('#runningTotal').html(temp.toFixed(2));
 }
+
+
+$(document).on('click', '#clearOrder', function clearOrder() {
+    $('#orderSummaryBody').empty();
+    $('#runningTotal').html('0.00');
+})

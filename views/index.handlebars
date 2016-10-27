@@ -33,10 +33,10 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="panel panel-primary"
-                     style="background-color: rgba(0,0,0,.7); color: white; border-color: #0000cc;">
-                    <div class="panel-heading" style="background-color: #3333ff; border-color: #0000cc;">
+                <div class="panel panel-primary order-summary"                     >
+                    <div class="panel-heading">
                         <h3 class="panel-title">Order Summary</h3>
+                        <div class="label label-danger total">Total: $<span id="runningTotal">0.00</span></div>
                     </div>
                     <div class="panel-body">
                         <table class="table">
@@ -50,31 +50,29 @@
                             </tbody>
                         </table>
                         <!--<div class="text-warning" hide="order.length">-->
-                            <!--Nothing added-->
+                        <!--Nothing added-->
                         <!--</div>-->
                         <!--<ul class="list-group" id="orderSummary">-->
-                            <!--<li class="list-group-item" repeat="item in order">-->
-                                <!--<div class="label label-success">Product Price</div>-->
-                                <!--<div class="label label-default">Product Description</div>-->
+                        <!--<li class="list-group-item" repeat="item in order">-->
+                        <!--<div class="label label-success">Product Price</div>-->
+                        <!--<div class="label label-default">Product Description</div>-->
 
-                                <!--<button class="btn btn-danger btn-xs pull-right" click="deleteItem(index)">-->
-                                    <!--<span class="glyphicon glyphicon-trash"></span>-->
-                                <!--</button>-->
-                            <!--</li>-->
+                        <!--<button class="btn btn-danger btn-xs pull-right" click="deleteItem(index)">-->
+                        <!--<span class="glyphicon glyphicon-trash"></span>-->
+                        <!--</button>-->
+                        <!--</li>-->
 
                         <!--</ul>-->
 
                     </div>
-                    <div class="panel-footer">
-                        <div class="label label-danger">Total: $<span id="runningTotal">0.00</span></div>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="text-muted">
-                            What form of payment will you be using?
-                        </div>
-                    </div>
+
+                    <!--<div class="panel-footer">-->
+                    <!--<div class="text-muted">-->
+                    <!--What form of payment will you be using?-->
+                    <!--</div>-->
+                    <!--</div>-->
                     <div class="pull-right">
-                        <span class="btn btn-default" click="clearOrder()">Clear</span>
+                        <span class="btn btn-default" id="clearOrder">Clear</span>
                         <span class="btn btn-danger" click="checkout()">Checkout</span>
                     </div>
                 </div>

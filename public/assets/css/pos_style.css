@@ -3,11 +3,28 @@
 	padding-bottom: 15px;
 	margin-top: 10px;
 }
-
 .btn{
 	margin-top: 5px;
 }
 
+.order-header {
+    background-color: #3333ff;
+    border-color: #0000cc;
+}
+.panel-heading h3 {
+    display: inline;
+}
+.total {
+    float: right;
+    font-size: 15px;
+    padding: 5px;
+    font-weight: normal;
+}
+.order-summary {
+    background-color: rgba(0,0,0,.7);
+    color: white;
+    border-color: #33cc12;
+}
 /*.panel-heading{
 	border-left-style: solid; 
 	border-left-width: 5px; 
