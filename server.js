@@ -26,32 +26,26 @@ var app = express();
 // override POST to have DELETE and PUT (update)
 app.use(methodOverride('_method'));
 
-// view engine setup
-//app.set('views', path.join(__dirname, 'views'));
-
 // Borrowed from sequelize-cats class activity
-app.use(session({ secret: 'app', cookie: { maxAge: 60000 }, resave: true, saveUninitialized: true}));
+app.use(session({secret: 'app', cookie: {maxAge: 60000}, resave: true, saveUninitialized: true}));
 
 
 // Handlebars
 var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
-	defaultLayout: 'main'
+    defaultLayout: 'main'
 }));
 
 app.set('view engine', 'handlebars');
 
 
 app.use(bodyParser.urlencoded({
-	extended: false
+    extended: false
 }));
+
 // Set /public as static so we can reference image and css files in that folder
 app.use(express.static(process.cwd() + '/public'));
 
-
-
-
-// app.use('/', posController);
 
 app.use('/', applicationController);
 app.use('/pos', posController);
@@ -64,4 +58,4 @@ app.listen(port);
 
 console.log(module.exports);
 
-//module.exports = app;
+module.exports = app;

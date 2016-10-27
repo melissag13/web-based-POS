@@ -17,7 +17,7 @@ $('document').ready(function() {
                     
             password: {
                 required: "Please provide a password",
-                minlength: "Password at least have 8 characters"
+                minlength: "Password needs at least 8 characters"
             },
             email: "Please enter a valid email address"
         },
