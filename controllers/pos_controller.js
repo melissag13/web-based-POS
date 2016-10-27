@@ -31,10 +31,14 @@ router.get('/', function (req, res) {
 router.post('/add', function (req, res) {
     var myItem = req.body.addItem;
     console.log("item:", myItem);
-    // Check if the product sku is in the database
-    // >> Need to update this to also check for UPCs and maybe make - optional
+    // Check if the product sku or upc is in the database
+    // >> maybe make the - optional
     Product.findOne({
-        where: {sku: myItem}
+        where: {
+            $or: [{sku: myItem},
+                {upc: myItem}
+            ]
+        }
     }).then(function (data) {
         if (data) {
             console.log("item sku:", data.sku);
@@ -45,7 +49,6 @@ router.post('/add', function (req, res) {
         }
     })
 })
-
 
 module.exports = router;
 
