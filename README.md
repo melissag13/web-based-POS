@@ -30,15 +30,14 @@
 
 ###Instructions:
 
-* User enters their name and email to get access to the game.
-* Once logged in, the user will click on the car in Seattle, WA to begin the game.
-* User then has to answer Trivia questions to get to their destination, Disney World. 
-	* The data for questions is provided by the Trivia API.
-* When user answers question correct, the vehicle will move on the map to the next location. 
-  * The data for the map is provided by Google Map API.
-* If the user gets the question wrong, the vehicle will remain in the same location until they answer the question right.
-* The goal is to get to Disney World. If the user reaches their destination, fireworks will be deployed.
-
+* You will first arrive on our landing page where it will go over what we do.
+* In order to access our POS system you must first register.
+	* In the navbar, click on Register.
+* Fill out the form and submit it. 
+	* This will register you in our database and keep a record to be able to directly login.
+* If you were already registered, from our landing page or registration page, you can go to login and enter your email and password. 
+  	* To login, you can access it from our landing page in the navbar or in the registration page in the bottom link.
+* 
 
 ###Deployed App:
 
