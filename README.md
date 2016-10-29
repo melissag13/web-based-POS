@@ -9,7 +9,7 @@
 * Huikai Zhong [Github](https://github.com/huikai123)
 
 ###Objective:
-* Disney Trail is a trivia game in which the player must answer trivia questions correctly in order to move along the mapped path from Seattle, WA all the way to Disney World.
+* 
 
 ###Technologies Used:
 * HTML
