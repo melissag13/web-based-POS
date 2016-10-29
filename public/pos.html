@@ -16,13 +16,47 @@
  </head>
  <body>
 
- <div class="container">
-        <!-- Jumbotron -->
-        <div class="jumbotron" style="background-color: rgba(0,0,0,.7); color: white">
-            <h2><span>Fork this POS</span></h2>
-            <span class="pull-right text-muted">Today is October 18, 2016 (Thu)</span>
-            <div class="text-muted">Orlando, FL</div>
+ <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../public/registration.html">Register</a>
+                    </li>
+                    <li>
+                       <a href="../public/login.html">Sign In </a> 
+                    </li>
+                    
+                </ul>
+            </div>
+            
         </div>
+        
+    </nav>
+
+    <!-- Image Background Page Header -->
+    
+    <div class="container">
+    <header class="business-header"> 
+        <div class="col-lg-12">
+            <h1 class="tagline">Fork-this-POS</h1>
+        </div>
+        <img id="head" src="assets/images/shop_cart.png" alt="checkOut" >
+        
+        <div class="row">
+            
+        </div>
+        
+    </header>
+</div>
+
+
+<div class="container">
+
+    <hr>
 
         <div class="row">
             <div class="col-md-6">
@@ -39,8 +73,8 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="panel panel-primary order-summary"                     >
-                    <div class="panel-heading">
+                <div class="panel panel-primary order-summary" >
+                    <div class="panel-heading" id="orderHead">
                         <h3 class="panel-title">Order Summary</h3>
                         <div class="label label-danger total">Total: $<span id="runningTotal">0.00</span></div>
                     </div>
@@ -55,40 +89,18 @@
                             <!--Order line items are added here via pos.js -->
                             </tbody>
                         </table>
-                        <!--<div class="text-warning" hide="order.length">-->
-                        <!--Nothing added-->
-                        <!--</div>-->
-                        <!--<ul class="list-group" id="orderSummary">-->
-                        <!--<li class="list-group-item" repeat="item in order">-->
-                        <!--<div class="label label-success">Product Price</div>-->
-                        <!--<div class="label label-default">Product Description</div>-->
-
-                        <!--<button class="btn btn-danger btn-xs pull-right" click="deleteItem(index)">-->
-                        <!--<span class="glyphicon glyphicon-trash"></span>-->
-                        <!--</button>-->
-                        <!--</li>-->
-
-                        <!--</ul>-->
-
-                    </div>
-
-                    <!--<div class="panel-footer">-->
-                    <!--<div class="text-muted">-->
-                    <!--What form of payment will you be using?-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <div class="pull-right">
+                    </div>                    <div class="pull-right">
                         <span class="btn btn-default" id="clearOrder">Clear</span>
                         <span class="btn btn-danger" id="checkBtn" click="checkout()">Checkout</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+</div>
 
 
- <script type="text/javascript"  ></script>
+ <script type="text/javascript" src="../controllers/pos_controller.js" ></script>
  </body>
  </html>
 
- 
